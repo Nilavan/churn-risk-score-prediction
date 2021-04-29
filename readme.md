@@ -75,7 +75,7 @@ The dataset folder contains the following files:
 
 ## Evaluation metric <a name="metric"></a>
 
-score = 100 x metrics.f1_score(actual, predicted, average="macro")
+**score** = 100 x metrics.f1_score(actual, predicted, average="macro")
 
 <div align="right">
     <b><a href="#">&#x261D back to top</a></b>
