@@ -1,8 +1,8 @@
-# **Churn risk score prediction**
+# Churn risk score prediction
 
 [HackerEarth machine learning challenge:](https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-predict-customer-churn/?utm_source=challenges-modern&utm_campaign=participated-challenges&utm_medium=right-panel) How NOT to lose a customer in 10 days
 
-## **About challenge**
+## About challenge
 
 ### Problem
 
@@ -14,15 +14,17 @@ Churn rate is a marketing metric that describes the number of customers who leav
 
 It factors in our unique and proprietary predictions of how long a user will remain a customer. This score is updated every day for all users who have a minimum of one conversion. The values assigned are between 1 and 5.
 
-### **Task**
+### Task
 
 To predict the churn score for a website based on the features provided in the dataset.
 
-Data description
-First Header | Second Header
-------------- | -------------
-Content Cell | Content Cell
-Content Cell | Content Cell
+### Data description
 
-Evaluation metric
+| First Header | Second Header |
+| ------------ | ------------- |
+| Content Cell | Content Cell  |
+| Content Cell | Content Cell  |
+
+### Evaluation metric
+
 score = 100 x metrics.f1_score(actual, predicted, average="macro")
