@@ -2,9 +2,16 @@
 
 [HackerEarth machine learning challenge:](https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-predict-customer-churn/?utm_source=challenges-modern&utm_campaign=participated-challenges&utm_medium=right-panel) How NOT to lose a customer in 10 days
 
-## About challenge
+## Go to
 
-### Problem
+- [Problem](#problem)
+- [Task](#task)
+- [Data description](#data_desc)
+- [Evaluation metric](#metric)
+- [Steps](#steps)
+- [Final submission](#sub)
+
+## Problem <a name="problem"></a>
 
 Churn rate is a marketing metric that describes the number of customers who leave a business over a specific time period. Every user is assigned a prediction value that estimates their state of churn at any given time. This value is based on:
 
@@ -14,11 +21,23 @@ Churn rate is a marketing metric that describes the number of customers who leav
 
 It factors in our unique and proprietary predictions of how long a user will remain a customer. This score is updated every day for all users who have a minimum of one conversion. The values assigned are between 1 and 5.
 
-### Task
+<br/>
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+<br/>
+
+## Task <a name="task"></a>
 
 To predict the churn score for a website based on the features provided in the dataset.
 
-### Data description
+<br/>
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+<br/>
+
+## Data description <a name="data_desc"></a>
 
 The dataset folder contains the following files:
 
@@ -52,6 +71,26 @@ The dataset folder contains the following files:
 |           feedback           |              Represents the feedback provided by a customer              |
 |       churn_risk_score       |         Represents the churn risk score that ranges from 1 to 5          |
 
-### Evaluation metric
+## Evaluation metric <a name="metric"></a>
 
 score = 100 x metrics.f1_score(actual, predicted, average="macro")
+
+## Steps <a name="steps"></a>
+
+- [x] Load data
+- [x] Preprocess data
+- [x] Perform exploratory data analysis
+- [x] Feature engineer
+- [x] Build and test different models
+- [x] Make predictions using best model (XGB
+- [x] Submit
+
+## Final submission <a name="sub"></a>
+
+- Online score: 76.76408
+- Offline score: 76.64014
+- Rank: [61](https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-predict-customer-churn/leaderboard/predict-the-churn-risk-rate-11-fb7a760d/page/2/)
+
+<div align="right">
+    <b><a href="#">&#x261D back to top</a></b>
+</div>
