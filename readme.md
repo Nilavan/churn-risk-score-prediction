@@ -88,7 +88,7 @@ The dataset folder contains the following files:
 - [x] Perform exploratory data analysis
 - [x] Feature engineer
 - [x] Build and test different models
-- [x] Make predictions using best model (XGB)
+- [x] Make predictions using best model (XGBoost)
 - [x] Submit
 
 <div align="right">
