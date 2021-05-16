@@ -9,6 +9,7 @@
 - [Data description](#data_desc)
 - [Evaluation metric](#metric)
 - [Steps](#steps)
+- [Ideas](#ideas)
 - [Final submission](#sub)
 
 ## Problem <a name="problem"></a>
@@ -40,38 +41,11 @@ The dataset folder contains the following files:
 - train.csv: 36992 x 25
 - test.csv: 19919 x 24
 
-|         Column name          |                               Description                                |
-| :--------------------------: | :----------------------------------------------------------------------: |
-|         customer_id          |        Represents the unique identification number of a customer         |
-|             Name             |                    Represents the name of a customer                     |
-|             age              |                     Represents the age of a customer                     |
-|         security_no          |  Represents a unique security number that is used to identify a person   |
-|       region_category        |             Represents the region that a customer belongs to             |
-|     membership_category      |    Represents the category of the membership that a customer is using    |
-|         joining_date         |           Represents the date when a customer became a member            |
-|   joined_through_referral    |    Represents whether a customer joined using any referral code or ID    |
-|         referral_id          |                         Represents a referral ID                         |
-|    preferred_offer_types     |           Represents the type of offer that a customer prefers           |
-|     medium_of_operation      | Represents the medium of operation that a customer uses for transactions |
-|       internet_option        |         Represents the type of internet service a customer uses          |
-|       last_visit_time        |         Represents the last time a customer visited the website          |
-|    days_since_last_login     | Represents the no. of days since a customer last logged into the website |
-|        avg_time_spent        |      Represents the average time spent by a customer on the website      |
-|    avg_transaction_value     |          Represents the average transaction value of a customer          |
-|   avg_frequency_login_days   |   Represents the no. of times a customer has logged in to the website    |
-|       points_in_wallet       |     Represents the points awarded to a customer on each transaction      |
-|    used_special_discount     |       Represents whether a customer uses special discounts offered       |
-| offer_application_preference |               Represents whether a customer prefers offers               |
-|        past_complaint        |         Represents whether a customer has raised any complaints          |
-|       complaint_status       |   Represents whether the complaints raised by a customer was resolved    |
-|           feedback           |              Represents the feedback provided by a customer              |
-|       churn_risk_score       |         Represents the churn risk score that ranges from 1 to 5          |
+See the columns in the dataset [here](data_description.md)
 
-<br>
 <div align="right">
     <b><a href="#">&#x261D back to top</a></b>
 </div>
-</br>
 
 ## Evaluation metric <a name="metric"></a>
 
@@ -85,11 +59,51 @@ The dataset folder contains the following files:
 
 - [x] Load data
 - [x] Preprocess data
-- [x] Perform exploratory data analysis
+- [x] Perform [exploratory data analysis](churn_risk_eda.ipynb)
 - [x] Feature engineer
-- [x] Build and test different models
+- [x] Build and test [different models](churn_risk_models_test.ipynb)
 - [x] Make predictions using best model (XGBoost)
-- [x] Submit
+- [x] [Submit](final.py)
+
+<div align="right">
+    <b><a href="#">&#x261D back to top</a></b>
+</div>
+
+## Ideas <a name="ideas"></a>
+1. NaNs in gender column replaced with F based on customer names
+2. Rows with churn risk score = -1 removed
+    - Trial 1. Found correlation of all columns with churn risk score column
+    - Noticed that replacing -1 score with 4 had best correlation
+    - Trial 2. Removing rows with -1 score gives best model accuracy
+3. NaNs in medium of operation replaced with 'both' (increased correlation with churn risk score)
+4. Columns had incorrect negative values which were converted to positive
+    - avg_time_spent
+    - points_in_wallet
+    - avg_frequency_login_days
+6. NaNs for other columns were filled with mean in case of float datatype and ffill method otherwise
+7. Values in columns joining_date and last_visit_time were converted to datetime
+8. Created new columns (Increased model f1 score)
+    - joining_year
+    - joining_month
+    - joining_day
+    - diff (total days)
+9. Label encoding for columns
+    - gender
+    - used_special_discount
+    - offer_application_preference
+    - past_complaint
+    - joined_through_referral
+    - membership_category
+    - feedback
+10. One hot encoding for columns
+    - region_category
+    - preferred_offer_types
+    - medium_of_operation
+    - internet_option
+    - complaint_status
+11. Dropped unnecessary columns
+12. Tried various oversampling techniques as churn risk scores 1 and 2 had very few data points compared to 3, 4, and 5
+13. Tried various models and found that xgboost and random forest models worked best with the former having an edge
 
 <div align="right">
     <b><a href="#">&#x261D back to top</a></b>
