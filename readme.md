@@ -10,6 +10,7 @@
 - [Evaluation metric](#metric)
 - [Steps](#steps)
 - [Ideas](#ideas)
+- [Areas to improve](#improve)
 - [Final submission](#sub)
 
 ## Problem <a name="problem"></a>
@@ -104,6 +105,14 @@ See the columns in the dataset [here](data_description.md)
 11. Dropped unnecessary columns
 12. Tried various oversampling techniques as churn risk scores 1 and 2 had very few data points compared to 3, 4, and 5
 13. Tried various models and found that xgboost and random forest models worked best with the former having an edge
+
+<div align="right">
+    <b><a href="#">&#x261D back to top</a></b>
+</div>
+
+## Areas to improve <a name="improve"></a>
+
+- 
 
 <div align="right">
     <b><a href="#">&#x261D back to top</a></b>
