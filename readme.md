@@ -112,7 +112,9 @@ See the columns in the dataset [here](data_description.md)
 
 ## Areas to improve <a name="improve"></a>
 
-- 
+- Response coding instead of one hot encoding
+- More feature engineering
+- Different methods of handling NaNs
 
 <div align="right">
     <b><a href="#">&#x261D back to top</a></b>
