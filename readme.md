@@ -24,7 +24,7 @@ Churn rate is a marketing metric that describes the number of customers who leav
 It factors in our unique and proprietary predictions of how long a user will remain a customer. This score is updated every day for all users who have a minimum of one conversion. The values assigned are between 1 and 5.
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
 
 ## Task <a name="task"></a>
@@ -32,7 +32,7 @@ It factors in our unique and proprietary predictions of how long a user will rem
 To predict the churn score for a website based on the features provided in the dataset.
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
 
 ## Data description <a name="data_desc"></a>
@@ -45,7 +45,7 @@ The dataset folder contains the following files:
 See the columns in the dataset [here](data_description.md)
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
 
 ## Evaluation metric <a name="metric"></a>
@@ -53,7 +53,7 @@ See the columns in the dataset [here](data_description.md)
 **score** = 100 x metrics.f1_score(actual, predicted, average="macro")
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
 
 ## Steps <a name="steps"></a>
@@ -67,7 +67,7 @@ See the columns in the dataset [here](data_description.md)
 - [x] [Submit](final.py)
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
 
 ## Ideas <a name="ideas"></a>
@@ -107,7 +107,7 @@ See the columns in the dataset [here](data_description.md)
 13. Tried various models and found that xgboost and random forest models worked best with the former having an edge
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
 
 ## Areas to improve <a name="improve"></a>
@@ -117,7 +117,7 @@ See the columns in the dataset [here](data_description.md)
 - Different methods of handling NaNs
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
 
 ## Final submission <a name="sub"></a>
@@ -127,5 +127,5 @@ See the columns in the dataset [here](data_description.md)
 - Rank: [61](https://www.hackerearth.com/challenges/competitive/hackerearth-machine-learning-challenge-predict-customer-churn/leaderboard/predict-the-churn-risk-rate-11-fb7a760d/page/2/)
 
 <div align="right">
-    <b><a href="#">&#x261D back to top</a></b>
+    <b><a href="#">↑ back to top</a></b>
 </div>
